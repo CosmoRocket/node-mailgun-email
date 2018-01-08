@@ -7,6 +7,7 @@ router.post('/email', (req, res) => {
   const attributes = req.body
   console.log(attributes)
 
+  // Send email with array of recipients, subject, body
   sendEmail(attributes.recipients, attributes.subject, attributes.text, attributes.html)
     .then(data => {
       res.status(201).json({ data })
