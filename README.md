@@ -7,7 +7,7 @@ A simple mailgun email client for Node.js
 Content-Type: application/json
 
 {
-  "recipients" : ["glenn.dimaliwat@gmail.com"],
+  "recipients" : ["user@gmail.com"],
   "subject" : "Hello",
   "text" : "Testing some Mailgun awesomness!",
   "html" : "<h1>Testing some Mailgun awesomness!</h1>"
