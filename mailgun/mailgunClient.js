@@ -14,10 +14,10 @@ const mg = mailgun.client({
 const sendEmail = (to, subject, text, html) => {
   return mg.messages.create(MAILGUN_DOMAIN, {
     from: `Cosmo Rocket Team <mailgun@${MAILGUN_DOMAIN}>`,
-    to: to,
-    subject: subject,
-    text: text,
-    html: html
+    to: to, // Array of recipients
+    subject: subject, // Email subject
+    text: text, // Email body (text version)
+    html: html // Email body (html version)
   })
 }
 
