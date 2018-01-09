@@ -17,4 +17,16 @@ router.post('/email', (req, res) => {
     })
 })
 
+// POST - Receive E-mail
+router.post('/receiveEmail', (req, res) => {
+  const attributes = req.body
+  console.log(attributes)
+
+  // Important data
+  // attributes.From  - Person who replied
+  // attributes.stripped-text - Person's reply (text version)
+  // atteibutes.stripped-html - Person's reply (html version)
+
+  res.status(201).json({ attributes })
+})
 module.exports = router
